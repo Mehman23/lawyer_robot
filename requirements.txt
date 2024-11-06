@@ -6,3 +6,4 @@ streamlit
 langchain_openai
 openpyxl
 sentence-transformers
+HuggingFaceEmbeddings
