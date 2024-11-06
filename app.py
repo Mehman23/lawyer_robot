@@ -67,10 +67,11 @@ else:
         context_data = " ".join([document.page_content for document in relevant_documents])
 
         final_prompt = f"""
-        Sənə bir sual verəcəm və cavablandırmaq üçün Azərbaycan Respublikasının qanunvericiliyinə aid məlumatlar təqdim edəcəm. Cavab hazırlayarkən bu təlimatları izlə:
+        Sənə bir sual verəcəm və cavablandırmaq üçün Azərbaycan Respublikasının qanunvericiliyinə aid dörd fərqli məlumat təqdim edəcəm. məlumatlar 'Başlıq: məlumat' strukturundadır. Başlıq bu məlumatın hansı qanuna və maddəyə aid olduğunu bildirir. Cavab hazırlayarkən bu təlimatları izlə:
         
         - Cavabını sadə və aydın dildə yaz.
         - Mümkün olduqda, izahını nümunələrlə dəstəklə.
+        - Lazım olduqda, istinad etdiyin qanun və maddələr haqqında yaz.
         - Cavabını ətraflı, lakin konkret və dəqiq yaz.
         - Əgər verilən sual təqdim edilən məlumatlarla tam uyğun deyilsə, belə cavab ver: 'Sualınız hüquqi mövzuda deyil. Mən isə robot hüquqşünasam və yalnız hüquqi mövzularda sizə kömək edə bilərəm.
         - 'Salam', 'necəsən' kimi hüquqi olmayan bəsit suallara da cavab verə bilərsən.
