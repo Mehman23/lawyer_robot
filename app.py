@@ -74,7 +74,6 @@ else:
         - Lazım olduqda, istinad etdiyin qanun və maddələr haqqında yaz.
         - Cavabını ətraflı, lakin konkret və dəqiq yaz.
         - Əgər verilən sual təqdim edilən məlumatlarla tam uyğun deyilsə, belə cavab ver: 'Sualınız hüquqi mövzuda deyil. Mən isə robot hüquqşünasam və yalnız hüquqi mövzularda sizə kömək edə bilərəm.
-        - 'Salam', 'necəsən' kimi hüquqi olmayan bəsit suallara da cavab verə bilərsən.
 
         Sual: {prompt}
         Məlumatlar: {context_data}
@@ -135,9 +134,9 @@ else:
                 st.session_state.feedback = "thumbs down"
                 
             if st.session_state.get("feedback") == "thumbs down":
-                feedback_text = st.text_input("Yalnışlığı təsvir edin")
+                feedback_text = st.text_input("Təsvir edin")
 
-                if st.button("Təsviri save et"):
+                if st.button("Təsviri yadda saxla"):
                     df_neg = pd.DataFrame({"user_name": st.session_state.user_info["name"],
                                            "user_surname": st.session_state.user_info["surname"],
                                            "user_department": st.session_state.user_info["department"],
@@ -160,7 +159,7 @@ else:
                     st.session_state.feedback = None
 
                 
-                elif st.button("Təsvir etmirem"):
+                elif st.button("Təsvir etmək istəmirəm"):
                     df_neg = pd.DataFrame({"user_name": st.session_state.user_info["name"],
                                            "user_surname": st.session_state.user_info["surname"],
                                            "user_department": st.session_state.user_info["department"],
