@@ -22,7 +22,7 @@ if "user_info_submitted" not in st.session_state:
 if not st.session_state.user_info_submitted:
 
     with st.form("user_info_form"):
-        st.header("Welcome to the AI Lawyer Chatbot 💬")
+        st.header("AI-Powered Lawyer Chatbot 💬")
         st.write("Məlumatlarızı daxil edin")
         
         name = st.text_input("Ad")
