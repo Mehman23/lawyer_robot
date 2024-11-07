@@ -22,7 +22,7 @@ if "user_info_submitted" not in st.session_state:
 if not st.session_state.user_info_submitted:
 
     with st.form("user_info_form"):
-        st.header("Welcome to the AI Lawyer Chatbot")
+        st.header("Welcome to the AI Lawyer Chatbot 💬")
         st.write("Məlumatlarızı daxil edin")
         
         name = st.text_input("Ad")
@@ -46,7 +46,7 @@ if not st.session_state.user_info_submitted:
     st.markdown("Created by **Azərbaycan Respublikasının Mərkəzi Bankı** © 2024", unsafe_allow_html=True)
 
 else:
-    st.title("AI Lawyer Chatbot :robot_face:")
+    st.title("💬 AI Lawyer Chatbot")
     st.divider()
 
     def get_final_prompt(prompt):
